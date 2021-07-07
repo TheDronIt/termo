@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Термообработка Леспром ДВ</title>
+	<link rel="shortcut icon" href="{% static '/web/img/favicon.ico'%}" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/index.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/mobile.css' %}">
+</head>
+<body>
+	{% block content %}
+
+	<div class="header" style="background-image: url({% static '/web/img/index-bg.png' %})">
+		{% include 'menu.html' %}
+
+		<div class="header-info">
+			<div></div>
+			<div class="header-title">Термообработка дерева<br> в Хабаровске</div>
+			<div style="margin: 10px 0; width: 80%; border-bottom: 3.5px solid white;"></div>
+			<div style="font-size: 35px">Высококачественная термообработка дерева<br> на Дальнем Востоке</div>
+			<div></div>
+		</div>
+
+		<a href="#process">
+			<div class="header-swipe" >
+				<div class="arrow"></div>
+			</div>
+		</a>	
+	</div>
+	
+
+	<div class="block" id="process">
+		<div class="headline">Фитосанитарная обработка поддонов и тары из дерева по международному стандарту</div>
+		<div class="line"></div>
+		<p style="text-align: center;">
+		Многие товары, производимые в России, отправляются на экспорт в другие страны. Согласно международному стандарту <b>ISPM 15</b>(МСФМ #15) вся деревянная упаковочная тара должна пройти специальную фитосанитарную обработку. Наша компания обладает всеми необходимыми знаниями, разрешениями и оборудованием для выполнения данной операции. Поэтому если вы ищите надежного партнера для поставок экспортной тары – будем рады помочь!
+		</p>
+	</div>
+
+
+	<div class="block">
+		<div class="headline">Процесс фитообработки поддонов</div>
+		<div class="line"></div>
+
+		<div class="process">
+			<div class="process-logo">
+				<p style="text-align: center; margin-top: 15%;"><img src="{% static '/web/img/icons/termo.png' %}" width="70%" ></p>
+			</div>
+			<div class="process-text text">Тепловая обработка (деревянная тара нагревается до определенной температуры в течение определенного времени). Аналогом тепловой обработки является камерная сушка и химическая пропитка под давлением.</div>
+		</div>
+		<div class="process">
+			<div class="process-text text" style="text-align: right;">После совершения необходимых операций на деревянную тару наносят маркировку, удостоверяющую процесс прохождения фитосанитарной обработки.</div>
+			<div class="process-logo">
+				<p style="text-align: center; margin-top: 15%;"><img src="{% static '/web/img/icons/tag.png' %}" width="70%" ></p>
+			</div>
+		</div>
+		<div class="process">
+			<div class="process-logo">
+				<p style="text-align: center; margin-top: 0%;"><img src="{% static '/web/img/icons/box.png' %}" width="80%" ></p>
+			</div>
+			<div class="text process-text">Поздравляем!<br>Теперь Ваша тара полностью готова для экспорта!</div>
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="headline">Термическая обработка древесины стандартом ISPM 15</div>
+		<div class="line"></div>
+		<p style="text-align: center;">
+		Деревянная тара, как правило, изготавливается из свежей древесины, которая, в свою очередь, не прошла обработку. В свежей древесине могут содержаться потенциально опасные организмы, с которыми надо бороться и не допускать их распространения. Как раз для этих целей и нужна фитообработка древесины.
+		Такие же упаковочные материалы как фанера, ДСП, клееная фанера не нуждаются в дополнительной защите от вредителей, так как они изготавливаются путем термической обработки, склеивания или прессования. Фанерный шпон, древесная шерсть, щепа, опилки и стружка, также не нуждаются в дополнительной термической обработке.
+		</p>
+	</div>
+
+	<div class="block">
+		<div class="headline">Согласно стандарту ISPM 15 (МСФМ #15) термической обработке подлежат</div>
+		<div class="line"></div>
+		<div class="ISPM">
+			<ul>
+				<li>Поддоны деревянные</li>
+				<li>Деревянные ящики и коробки</li>
+				<li>Крепежная древесина</li>
+				<li>Барабаны и катушки</li>
+				<li>Деревянные обрешетки</li>
+				<li>Упаковочные блоки</li>
+				<li>Обечайки поддонов</li>
+				<li>Погрузочные подмостки</li>
+			</ul>
+		</div>
+		<a href="{% static '/web/document/license.pdf' %}" style="text-decoration: none; color: black" download>
+			<div style="text-align: center; color: gold; background-color: black; padding: 8px; border-radius: 50px; margin-top: 50px;">Лицензия фитосанитарной обработки ООО ЛЕСПРОМ ДВ</div>
+		</a>
+	</div>
+
+
+	<div class="block">
+		<div class="headline">Нужен ли фитосанитарный сертификат на деревянную тару при экспорте товара?</div>
+		<div class="line"></div>
+		<p style="text-align: left">
+			При экспортных поставках товара часто возникает вопрос, нужно ли получать фитосанитарный сертификат на деревянную тару, используемую для поддержки, защиты или упаковки товара.<br>
+			<b>Ответ: </b>Нет, не нужно, если указанная категория продукции уже промаркирована в соответствии с международными стандартами, предусмотренными ISPM 15, то нет необходимости в предоставлении дополнительных разрешительных документов
+			<br><br>
+			В соответствии с требованиями международного стандарта по фитосанитарным мерам #15 (ISPM15) «Руководство по регулированию древесных упаковочных материалов в международной торговле» Россельхознадзором России разработаны образцы маркировочных знаков
+		</p>
+	</div>
+
+	{% include 'footer.html' %}
+
+	{% endblock %}
+</body>
+</html>

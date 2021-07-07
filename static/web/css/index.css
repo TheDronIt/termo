@@ -1,0 +1,31 @@
+.process
+{
+	width: 900px;
+	height: auto;
+	margin: 60px 0;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.process-logo
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 90px;
+	background-color: #FFF84B; 
+	border: 3px solid black;
+	margin: auto;
+}
+.process-text
+{
+	padding:0 20px;
+}
+
+.ISPM
+{
+	margin: 0 auto ;
+	width: 450px;
+}
+.ISPM ul li
+{
+	margin: 30px 0;
+}

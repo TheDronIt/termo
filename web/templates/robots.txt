@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: https://termolespromdv.ru/admin/login/?next=/admin/
+Sitemap: https://termolespromdv.ru/sitemap.xml

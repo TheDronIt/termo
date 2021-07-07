@@ -1,0 +1,23 @@
+{% load static %}
+<div class="header-menu">
+	<input id="menu__toggle" type="checkbox" / style="visibility: hidden;">
+	<label class="menu__btn" for="menu__toggle">
+   		<span></span>
+	</label>
+
+	<div class="menu-element">
+		<div><a href="/" class="menu-txt">
+			Главная
+		</a></div>
+		<div><a href="/product" class="menu-txt">
+			Услуги
+		</a></div>
+		<div><a href="/contact" class="menu-txt">
+			Контакты
+		</a></div>
+		<div>
+			<img src="{% static '/web/img/icons/phone.png' %}" style="margin-right: 10px;"><a class="menu-txt">+7 914-318-57-77</a>
+		</div>
+	</div>
+
+</div>

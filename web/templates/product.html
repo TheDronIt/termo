@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Термообработка Леспром ДВ</title>
+	<link rel="shortcut icon" href="{% static '/web/img/favicon.ico'%}" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/contact.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/product.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/mobile.css' %}">
+</head>
+<body>
+{% block content %}
+
+	<div class="header" style="background-image: url({% static '/web/img/product-bg.png' %})">
+		{% include 'menu.html' %}
+
+		<div class="header-info">
+			<div></div>
+			<div class="header-title">Ознакомьтесь с нашим каталогом услуг</div>
+		</div>
+
+		<a href="#product">
+			<div class="header-swipe" >
+				<div class="arrow"></div>
+			</div>
+		</a>
+
+	</div>
+
+
+
+
+	<div class="block" id="product">
+		<div class="headline">Каталог услуг</div>
+		<div class="line"></div>
+		<div class=product>
+			{% for product in product %}
+				<a href="/product/{{product.id}}" style="text-decoration: none; color: black;">
+					<div class="product-el" style="background-image: url({{product.img.url}})">
+						<div></div>
+						<div style="text-align: center; width: 80%; margin: auto;">{{ product.name }}</div>
+						<div></div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="headline">Порядок обеззараживания деревянной тары методом термообработки</div>
+		<div class="line"></div>
+		<div class="product-element">
+			<div class="product-element-logo">
+				<p style="text-align: center; margin-top: 15%; margin-right: 8%"><img src="{% static '/web/img/icons/time.png' %}" width="70%" ></p>
+			</div>
+			<div class="product-element-headline">
+				<div></div>
+				<div>
+					1. Процесс термической обработки деревянной тары.
+				</div>
+				<div></div>
+			</div>
+		</div>
+		<p style="margin: 10px 0 0 150px;">
+			При термообработке древесина нагревается до температуры не ниже +560C и находится в указанном температурном диапазоне не менее 30 минут. Это позволяет эффективно уничтожать большинство видов вредителей древесины. При камерной сушке (килн драинг) древесина высушивается в специальных камерах при температуре выше +600C до состояния влажности древесины не выше 20%. При этом также уничтожается большинство вредителей.
+		</p>
+	</div>
+
+	<div class="block">
+		<div class="product-element">
+			<div class="product-element-logo">
+				<p style="text-align: center; margin-top: 15%;"><img src="{% static '/web/img/icons/request.png' %}" width="70%" ></p>
+			</div>
+			<div class="product-element-headline">
+				<div></div>
+				<div>
+					2. Что необходимо для заказа услуги по обеззараживанию деревянной тары?
+				</div>
+				<div></div>
+			</div>
+		</div>
+		<p style="margin: 10px 0 0 150px;">
+			На электронный адрес, указанный на сайте компании, направить заявку на производство обеззараживания деревянной тары, предназначенной для поддержки, защиты или упаковки экспортной продукции методом термообработки или камерной сушки. В заявке обязательно должно быть указано: вид деревянной тары и ее количество (шт.); наименование грузополучателя и его адресные данные; реквизиты экспортного контракта; реквизиты Заказчика для подготовки договора.
+
+		</p>
+	</div>
+
+	<div class="block">
+		<div class="product-element">
+			<div class="product-element-logo">
+				<p style="text-align: center; margin-top: 15%;"><img src="{% static '/web/img/icons/act.png' %}" width="70%" ></p>
+			</div>
+			<div class="product-element-headline">
+				<div></div>
+				<div>
+					3. Работы по изготовлению и обеззараживанию деревянной тары выполняются на основании заключенного Договора
+				</div>
+				<div></div>
+			</div>
+		</div>
+		<p style="margin: 10px 0 0 150px;">
+			Результатом выполнения работ является: Нанесение на каждую единицу деревянной тары либо упаковочного материала маркировки, удостоверяющей, что обеззараживание произведено в соответствии со стандартом ISPM 15 уполномоченной на это организацией; Акт о проведении работ по обеззараживанию деревянного упаковочного материала.
+
+		</p>
+	</div>
+
+
+	<div class="block">
+		<div class="headline">Расшифровка знаков международной маркировки по стандарту ISPM 15</div>
+		<div class="line"></div>
+		<div class="decode">
+			<ul>
+				<li>RU – код страны-экспортера деревянной упаковки (Russia);</li>
+				<li>ХХ – код региона России (согласно классификатора регионов-субъектов Российской Федерации);</li>
+				<li>ХХХ – личный идентификационный номер организаций (граждан), производящих упаковку или производящих ее обеззараживание;</li>
+				<li>DB – древесина, используемая в качестве упаковки, окорена (debarking);</li>
+				<li>HT – проведена термическая обработка при достижении температуры не ниже 560 за минимальный промежуток времени 30 минут (heat treatment);</li>
+				<li>KD – высушивание в закрытой камере с использованием высоких температур для получения заданного процента влажности — «килн драинг» (kiln-drying);</li>
+				<li>MB – проведена фумигация бромистым метилом по заданным стандартам обработки (methyl bromide).</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="headline">Пакет официальных документов по вопросу Фитосанитарной обработки деревянной тары: законы, стандарты, письма</div>
+		<div class="line"></div>
+		<div style="text-align: center; width: 800px; margin: auto;">
+		<b>
+			Специально для вас мы собрали полный пакет документов регулирующих вопросы фитообработки и сертификации тары предназначенной для экспорта и импорта согласно международным стандартам.<br>(кликабельно)
+		</b>
+		</div>
+		<div  class="product-packet">
+			<ul>
+				<a href="{% static '/web/document/ISPM.pdf' %}" style="text-decoration: none; color: black" download>
+					<li>Международные стандарты по фитосанитарным мерам мсфм № 15 руководство по регулированию древесных упаковочных материалов в международной торговле</li>
+				</a>
+				<a href="{% static '/web/document/ФЗ о карантите растений.pdf' %}" style="text-decoration: none; color: black" download>
+					<li>Федеральный закон "О карантине растений" от 21.07.2014 N 206-ФЗ</li>
+				</a>
+				<a href="{% static '/web/document/Коммерческое предложение.rtf' %}" style="text-decoration: none; color: black" download>
+					<li>Коммерческое предложение</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="block" id="form">
+		<form method="POST" >
+			<div class="contact">
+				<div class="contact-form-headline">
+					Оставьте заявку по форме
+				</div>
+				{% csrf_token %}
+				<div class="contact-element">
+					{{ form.FIO }}
+				</div>
+				<div class="contact-element">
+					{{ form.phone }}
+				</div>
+				<div class="contact-element">
+					{{ form.email }}
+				</div>
+				<div class="contact-element">
+					{{ form.client }}
+				</div>
+				<div class="contact-element-duo">
+					<div>{{ form.tara }}</div>
+					<div>{{ form.value }}</div>
+				</div>
+				<div class="contact-element">
+					{{ form.comment }}
+				</div>
+				<div class="contact-btn-block">
+					<button type="submit" class="contact-btn">Заказать</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+	{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

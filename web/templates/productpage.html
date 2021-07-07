@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Термообработка Леспром ДВ</title>
+	<link rel="shortcut icon" href="{% static '/web/img/favicon.ico'%}" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/contact.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/product.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/web/css/mobile.css' %}">
+</head>
+<body>
+{% block content %}
+
+<div class="product-menu">
+	{% include 'menu.html'%}
+</div>
+
+<div>
+	
+</div>
+
+<div style="min-height: 700px;" class="block">
+	<div class="productpage-block">
+		<div class="productpage-photo" style="background-image: url({{productpage.img.url}})"></div>
+		<div class="productpage-info">
+			<div class="productpage-el productpage-name">
+				<b>{{productpage.name}}</b>
+			</div>
+			<div class="productpage-el">
+				<b>Сорт: </b>{{productpage.sort}}
+			</div>
+			<div class="productpage-el">
+				<b>Грузоподъемность: </b>{{productpage.gryz}}
+			</div>
+			<div class="productpage-el">
+				<b>Ширина: </b>{{productpage.width}}
+			</div>
+			<div class="productpage-el">
+				<b>Длина: </b>{{productpage.length}}
+			</div>
+			<div class="productpage-el">
+				<b>Высота: </b>{{productpage.height}}
+			</div>
+			<div class="productpage-el">
+				<b>Материал: </b>{{productpage.material}}
+			</div>
+			<div class="productpage-el">
+				<b>Толщина доски: </b>{{productpage.thickness}}
+			</div>
+			<div class="productpage-el">
+				<b>Клеймо: </b>{{productpage.stamp}}
+			</div>
+			<div class="productpage-el">
+				<b>Нормативные документы: </b>{{productpage.doc}}
+			</div>
+			<div class="productpage-el">
+				<b>Цена: </b>{{productpage.price}}
+			</div>
+		</div>
+	</div>
+	<a href="/product#form" style="text-decoration: none;">
+		<div class="productpage-buy">
+		Заказать
+	</div>
+	</a>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

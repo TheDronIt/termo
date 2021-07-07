@@ -1,0 +1,127 @@
+@media screen and (max-width: 990px) 
+{
+	.text
+	{
+		font-size: 45px;
+	}
+	.headline
+	{
+		font-size: 55px;
+	}
+	.process-logo
+	{
+		width: 200px;
+		height: 200px;
+		border-radius: 180px;
+	}
+	.footer-btn
+	{
+		width: 100%;
+		height: 90px;
+		line-height: 90px;
+		font-size: 50px;
+	}
+	.footer-contact
+	{
+		grid-template-columns: repeat(auto-fit, 80%);
+	}
+
+
+	.header-menu
+	{
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	.menu-element
+	{
+		transition-duration: 0.7s;
+		top: -600px;
+		position: relative;
+		display: block;
+		text-align: center;
+		background-color: #383838;
+		visibility: visible;
+	}
+	.menu-element > div
+	{
+		padding: 20px 0;
+	}
+	.menu-txt
+	{
+		text-decoration: none;
+		color: #FFF84B;
+		font-size: 40px;
+	}
+
+
+
+	#menu__toggle 
+	{
+  		opacity: 0;
+	}
+
+	#menu__toggle:checked ~ .menu__btn > span {
+	  transform: rotate(45deg);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::before {
+	  top: 0;
+	  transform: rotate(0);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::after {
+	  top: 0;
+	  transform: rotate(90deg);
+	}
+	#menu__toggle:checked ~ .header-menu
+	{
+		background-color: red;
+	}
+	#menu__toggle:checked ~ .menu-element
+	{
+		transition-duration: 0.5s;
+		top: -88px;
+		visibility: visible;
+	}
+	.menu__btn {
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: 0px;
+	left: 30px;
+
+	width: 56px;
+	height: 56px;
+
+	cursor: pointer;
+	z-index: 1;
+	}
+
+	.menu__btn > span,
+	.menu__btn > span::before,
+	.menu__btn > span::after {
+	  display: block;
+	  position: absolute;
+
+	  width: 100%;
+	  height: 3px;
+
+	  background-color: white;
+
+	  transition-duration: .25s;
+	}
+	.menu__btn > span::before {
+	  content: '';
+	  top: -16px;
+	}
+	.menu__btn > span::after {
+	  content: '';
+	  top: 16px;
+	}
+	.product-menu
+	{
+		width: 100%; 
+		height: 100px;
+		background-color:black;
+	}
+
+}
